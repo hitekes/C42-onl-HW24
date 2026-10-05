@@ -1,4 +1,4 @@
-package homework;
+package com.example;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,14 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "minskServlet", urlPatterns = "/minsk")
-public class MinskServlet extends HttpServlet {
+@WebServlet(name = "beijingServlet", urlPatterns = "/beijing")
+public class BeijingServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         resp.setContentType("text/plain;charset=UTF-8");
         PrintWriter out = resp.getWriter();
-        out.println("Время в Минске: " + TimeUtils.getTime("Europe/Minsk"));
+        out.println("Время в Пекине: " + TimeUtils.getTime("Asia/Shanghai"));
     }
 }
